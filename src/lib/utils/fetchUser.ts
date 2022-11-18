@@ -1,7 +1,7 @@
 import type { IFollowersResponse, IReposResponse, IStarredResponse, IUsersResponse } from "$lib/interfaces/ApiResponses";
-import { mapUser } from "./mappers";
+import mapUser from "./mapUser";
 
-export async function fetchUser(nickname: string) {
+export default async function fetchUser(nickname: string) {
     const response = await fetch(`https://api.github.com/users/${nickname}`)
     const userData: IUsersResponse = await response.json()
 

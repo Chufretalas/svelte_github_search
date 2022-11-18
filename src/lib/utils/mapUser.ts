@@ -3,7 +3,7 @@ import type IRepo from "$lib/interfaces/IRepo";
 import type IUser from "$lib/interfaces/IUser";
 import type IUserSimple from "$lib/interfaces/IUserSimple";
 
-export function mapUser(
+export default function mapUser(
     userData: IUsersResponse,
     followersData: IFollowersResponse[],
     reposData: IReposResponse[],

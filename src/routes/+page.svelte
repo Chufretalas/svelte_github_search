@@ -2,6 +2,9 @@
 	import Footer from "$components/Footer.svelte";
 	import Navbar from "$components/Navbar.svelte";
 	import HomeColumn from "$components/HomeColumn.svelte";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
 
 	const exampleData = [
 		"Something 1",
