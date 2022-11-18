@@ -3,7 +3,7 @@
 		<img src="https://github.com/Chufretalas.png" alt="" class="active-user-avatar" />
 		<span class="active-user-nickname">Chufretalas</span>
 	</div>
-	<form action="" class="search-form">
+	<form method="POST" action="?/searchUser" class="search-form">
 		<input
 			type="text"
 			name="nickname"
