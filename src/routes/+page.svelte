@@ -3,19 +3,10 @@
 	import Navbar from "$components/Navbar.svelte";
 	import HomeColumn from "$components/HomeColumn.svelte";
 	import type { PageData } from "./$types";
+	import UserCard from "$components/UserCard.svelte";
+	import RepoCard from "$components/RepoCard.svelte";
 
 	export let data: PageData;
-
-	const exampleData = [
-		"Something 1",
-		"Something 2",
-		"Something 3",
-		"Something 4",
-		"Something 5",
-		"Something 6",
-		"Something 7",
-		"Something 8"
-	];
 </script>
 
 <svelte:head>
@@ -23,22 +14,28 @@
 </svelte:head>
 
 <div class="content-wrapper">
-	<Navbar />
+	<Navbar user={data.user}/>
 	<main>
 		<HomeColumn columnTitle="Followers">
-			{#each exampleData as data (data)}
-				<li>{data} | followers</li>
-			{/each}
+			{#if data.user}
+				{#each data.user.followers as follower (follower.nickname)}
+				<UserCard user={follower}/>
+				{/each}
+			{/if}
 		</HomeColumn>
 		<HomeColumn columnTitle="Repos">
-			{#each exampleData as data (data)}
-				<li>{data} | repos</li>
-			{/each}
+			{#if data.user}
+				{#each data.user.repos as repo (repo.name)}
+				<RepoCard repo={repo}/>
+				{/each}
+			{/if}
 		</HomeColumn>
 		<HomeColumn columnTitle="Starred">
-			{#each exampleData as data (data)}
-				<li>{data} | starred</li>
-			{/each}
+			{#if data.user}
+				{#each data.user.starred as repo (repo.name)}
+				<RepoCard repo={repo}/>
+				{/each}
+			{/if}
 		</HomeColumn>
 	</main>
 	<Footer />

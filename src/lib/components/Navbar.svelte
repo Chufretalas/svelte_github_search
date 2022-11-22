@@ -1,7 +1,18 @@
+<script lang="ts">
+	import { placeholderUser } from "$lib/constants";
+	import type IUser from "$lib/interfaces/IUser";
+
+	export let user: IUser | undefined;
+	if (!user) {
+		user = placeholderUser;
+	}
+	user as IUser;
+</script>
+
 <nav>
 	<div class="active-user-wrapper">
-		<img src="https://github.com/Chufretalas.png" alt="" class="active-user-avatar" />
-		<span class="active-user-nickname">Chufretalas</span>
+		<img src={user?.avatar_url} alt="" class="active-user-avatar" />
+		<span class="active-user-nickname">{user?.nickname}</span>
 	</div>
 	<form method="POST" action="?/searchUser" class="search-form">
 		<input
@@ -15,7 +26,7 @@
 </nav>
 
 <style>
-    nav {
+	nav {
 		position: sticky;
 		top: 0;
 		height: 12vh;
