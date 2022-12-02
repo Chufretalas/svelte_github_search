@@ -32,4 +32,18 @@
         overflow: hidden;
         overflow-wrap: break-word;
 	}
+
+	@media screen and (max-width: 600px) {
+		.card-wrapper {
+            min-height: 30vh;
+            max-height: 35vh;
+            max-width: 80%;
+			font-size: 1.3rem;
+        }
+		.name {
+			font-size: 1.4rem;
+			font-weight: 800;
+			text-decoration: underline;
+		}
+	}
 </style>

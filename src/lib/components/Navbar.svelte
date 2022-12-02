@@ -89,4 +89,19 @@
 		cursor: pointer;
 		height: 7vh;
 	}
+
+	@media screen and (max-width: 600px) {
+		nav {
+			flex-direction: column;
+			height: 25vh;
+			justify-content: space-around;
+		}
+		.search-form input {
+			min-width: 60vw;
+			min-height: 2rem;
+		}
+		.search-form button {
+			min-height: 2rem;
+		}
+	}
 </style>

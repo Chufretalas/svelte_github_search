@@ -46,6 +46,19 @@
 		width: 18vw;
 		overflow-x: hidden;
 		overflow-y: auto;
-        row-gap: 10px;
+		row-gap: 10px;
+	}
+
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 90%;
+			align-self: center;
+			height: 100vh;
+		}
+
+		.column-list {
+			width: auto;
+			max-height: none;
+		}
 	}
 </style>

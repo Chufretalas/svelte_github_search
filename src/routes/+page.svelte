@@ -14,26 +14,26 @@
 </svelte:head>
 
 <div class="content-wrapper">
-	<Navbar user={data.user}/>
+	<Navbar user={data.user} />
 	<main>
 		<HomeColumn columnTitle="Followers">
 			{#if data.user}
 				{#each data.user.followers as follower (follower.nickname)}
-				<UserCard user={follower}/>
+					<UserCard user={follower} />
 				{/each}
 			{/if}
 		</HomeColumn>
 		<HomeColumn columnTitle="Repos">
 			{#if data.user}
 				{#each data.user.repos as repo (repo.name)}
-				<RepoCard repo={repo}/>
+					<RepoCard {repo} />
 				{/each}
 			{/if}
 		</HomeColumn>
 		<HomeColumn columnTitle="Starred">
 			{#if data.user}
 				{#each data.user.starred as repo (repo.name)}
-				<RepoCard repo={repo}/>
+					<RepoCard {repo} />
 				{/each}
 			{/if}
 		</HomeColumn>
@@ -57,5 +57,12 @@
 		grid-template-rows: 2fr 14fr 1fr;
 		row-gap: 10px;
 		align-items: center;
+	}
+
+	@media screen and (max-width: 600px) {
+		main {
+			flex-direction: column;
+			row-gap: 10px;
+		}
 	}
 </style>

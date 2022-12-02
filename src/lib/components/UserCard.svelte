@@ -34,4 +34,15 @@
         max-height: 85%;
         border-radius: 1000px;
     }
+
+    @media screen and (max-width: 600px) {
+		.card-wrapper {
+            min-height: 20vh;
+            max-height: 24vh;
+            max-width: 75%;
+        }
+        .nickname {
+			font-size: 1.4rem;
+        }
+	}
 </style>
