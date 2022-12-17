@@ -23,12 +23,12 @@
 		border-radius: 20px;
 		padding: 2% 6%;
 		border: 3px solid var(--blue-color);
-        font-size: 0.8rem;
+        font-size: 1rem;
         overflow: hidden;
         overflow-wrap: break-word;
 	}
 	.name {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
         overflow: hidden;
         overflow-wrap: break-word;
 	}

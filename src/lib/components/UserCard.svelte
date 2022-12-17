@@ -28,18 +28,22 @@
         border: 3px solid var(--blue-color);
     }
     .nickname {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
     .profile-image{
         max-height: 85%;
+        max-width: 85%;
         border-radius: 1000px;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
 		.card-wrapper {
-            min-height: 20vh;
+            min-height: 40vh;
             max-height: 24vh;
             max-width: 75%;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 0.8rem;
         }
         .nickname {
 			font-size: 1.4rem;

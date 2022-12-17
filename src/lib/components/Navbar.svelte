@@ -93,15 +93,27 @@
 	@media screen and (max-width: 600px) {
 		nav {
 			flex-direction: column;
-			height: 25vh;
+			height: 28vh;
 			justify-content: space-around;
 		}
+
+		.search-form {
+			flex-direction: column;
+			row-gap: 0.5rem;
+		}
+		
 		.search-form input {
 			min-width: 60vw;
 			min-height: 2rem;
 		}
+
+		.search-form input::placeholder {
+			font-size: 1rem;
+		}
+
 		.search-form button {
 			min-height: 2rem;
+			width: 50%;
 		}
 	}
 </style>

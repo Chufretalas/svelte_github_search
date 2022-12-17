@@ -32,7 +32,7 @@
     @media screen and (max-width: 600px) {
 		footer {
             height: 1rem;
-            width: 50%;
+            width: 80%;
             margin-top: 10px;
         }
 	}
